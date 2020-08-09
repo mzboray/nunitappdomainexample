@@ -5,13 +5,13 @@ using CefSharp.OffScreen;
 
 namespace ScreenshotLib
 {
-    public sealed class CefThread
+    public sealed class CefThreadHolder
     {
         private readonly ManualResetEventSlim _initEvent, _shutdownEvent;
 
         private readonly Thread _thread;
 
-        private CefThread()
+        private CefThreadHolder()
         {
             _initEvent = new ManualResetEventSlim(false);
             _shutdownEvent = new ManualResetEventSlim(false);
@@ -22,7 +22,7 @@ namespace ScreenshotLib
             };
         }
 
-        public static CefThread Instance { get; } = new CefThread();
+        public static CefThreadHolder Instance { get; } = new CefThreadHolder();
 
         public bool IsInitialized
         {

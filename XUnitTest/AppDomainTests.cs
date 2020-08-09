@@ -2,7 +2,7 @@
 using Xunit;
 using Xunit.Abstractions;
 
-namespace XUnitTestLib
+namespace XUnitTest
 {
     public class AppDomainTests
     {

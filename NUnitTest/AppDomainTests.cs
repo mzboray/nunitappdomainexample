@@ -1,7 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 
-namespace NUnitTestLib
+namespace NUnitTest
 {
     public class AppDomainTests
     {

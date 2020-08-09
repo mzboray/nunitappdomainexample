@@ -45,8 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CefThread.cs" />
-    <Compile Include="ScreenshotBrowser.cs" />
+    <Compile Include="CefThreadHolder.cs" />
+    <Compile Include="ScreenshotTaker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
