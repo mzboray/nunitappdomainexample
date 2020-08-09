@@ -1,4 +1,5 @@
 # nunitappdomainexample
+<<<<<<< HEAD
 
 An example project showing NUnit appdomain options and the desired behavior exhibited by xUnit.net for comparison. A setup is shown for VS adapters and console runners (in build.cake).
 
@@ -10,9 +11,12 @@ The library in this use case, CefSharp, has several requirements. It is required
 
 ## Comparison
 
-xUnit.net can handle this situation somewhat gracefully both in Visual Studio and from the command line. All that is required is the "xunit.appDomain" setting in the app.config of the test project is set to "denied".
+xUnit.net can handle this situation somewhat gracefully both in Visual Studio and from the command line. All that is required is the "xunit.appDomain" setting in the app.config of the test project is set to "denied". This setting can also be set in xunit.runner.json.
 
 NUnit on the other hand doesn't seem to have a similar option that can be used by the Visual Studio adapter. In fact, something deeper in the loading process of NUnit causes the runner to crash before running any tests.
+
+NUnit can use the runsettings DisableAppDomain option but this does not use the default appdomain.
+xUnit.net has the same behavior with this option. So it is not used for that project.
 
 Using the console runners for both frameworks is possible, so I have shown that in the build.cake script. The setup is somewhat more complicated for NUnit because it won't automatically load assemblies outside of the tools base directory and the working directory is not modified. However with some setup it does work and tests pass.
 
