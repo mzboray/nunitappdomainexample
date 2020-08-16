@@ -1,5 +1,4 @@
 # nunitappdomainexample
-<<<<<<< HEAD
 
 An example project showing NUnit appdomain options and the desired behavior exhibited by xUnit.net for comparison. A setup is shown for VS adapters and console runners (in build.cake).
 
